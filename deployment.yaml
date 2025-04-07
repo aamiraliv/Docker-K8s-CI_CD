@@ -17,5 +17,13 @@ spec:
       containers:
         - name: my-spring-boot-app
           image: amiraliv/my-spring-boot-app:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
