@@ -21,4 +21,8 @@ public class HelloController {
         return "User List: Alice, Bob";
     }
 
+    @GetMapping("/test")
+    public String test() {
+        return "testing the ci -> continues integration";
+    }
 }

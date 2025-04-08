@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-spring-boot-diployment
+  name: my-spring-boot-deployment
   labels:
     app: my-spring-boot-app
 spec:
@@ -17,7 +17,6 @@ spec:
       containers:
         - name: my-spring-boot-app
           image: amiraliv/my-spring-boot-app:latest
-          imagePullPolicy: Never
           ports:
             - containerPort: 8080
           resources:
